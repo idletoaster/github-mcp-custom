@@ -257,19 +257,21 @@ Once configured, you'll have access to these GitHub MCP tools:
 
 ---
 
-## 📁 File Structure
+## 📁 Source Code
+
+**Note:** This repository contains the essential source files. For the complete original GitHub MCP Server source code, visit the [official repository](https://github.com/github/github-mcp-server).
 
 ```
 github-mcp-custom/
-├── bin/
-│   └── index.js              # Node.js launcher
-├── dist/
-│   ├── github-mcp-server.exe # Windows binary
-│   ├── github-mcp-server-macos # macOS binary  
-│   └── github-mcp-server-linux # Linux binary
-├── package.json
-└── README.md
+├── cmd/github-mcp-server/
+│   ├── cmd/github-mcp-server/main.go  # Main entry point
+│   └── go.mod                         # Go dependencies
+├── package.json                       # NPM package configuration
+├── go.mod                            # Root Go module
+└── README.md                         # This file
 ```
+
+To build from source, you'll need the complete source code from the official repository.
 
 ---
 
@@ -286,24 +288,25 @@ github-mcp-custom/
 ## 📈 Version History
 
 - **v1.0.20** - Fixed Claude Desktop protocol compatibility
+- **v1.0.18** - Working version with protocol fixes
+- **v1.0.17** - Protocol compatibility improvements
 - **v1.0.16** - Previous version (had connection issues)
-- **v1.0.x** - Earlier releases
 
 ---
 
 ## 👷 How This Was Built
 
-1. Cloned the official GitHub MCP Server repository.
-2. Updated protocol version for Claude Desktop compatibility.
+1. Cloned the official GitHub MCP Server repository
+2. Updated mcp-go library from v0.30.0 to v0.26.0 for Claude Desktop protocol compatibility
 3. Compiled Go binaries for all platforms:
    ```bash
    GOOS=linux GOARCH=amd64 go build -o dist/github-mcp-server-linux ./cmd/github-mcp-server
    GOOS=darwin GOARCH=amd64 go build -o dist/github-mcp-server-macos ./cmd/github-mcp-server  
    GOOS=windows GOARCH=amd64 go build -o dist/github-mcp-server.exe ./cmd/github-mcp-server
    ```
-4. Created a Node.js wrapper script (`bin/index.js`) for cross-platform execution.
-5. Set up NPM-compatible `package.json` with proper bin configuration.
-6. Published the package with protocol compatibility fixes.
+4. Created a Node.js wrapper script for cross-platform execution
+5. Set up NPM-compatible `package.json` with proper bin configuration
+6. Published the package with protocol compatibility fixes
 
 ---
 
@@ -315,7 +318,7 @@ Contributions are welcome! Please visit our GitHub repository:
 
 - 🐛 **Report issues:** [GitHub Issues](https://github.com/idletoaster/github-mcp-custom/issues)
 - 💡 **Feature requests:** [GitHub Discussions](https://github.com/idletoaster/github-mcp-custom/discussions)
-- 🔧 **Pull requests:** [Contribution Guidelines](https://github.com/idletoaster/github-mcp-custom/blob/main/CONTRIBUTING.md)
+- 🔧 **Pull requests:** Welcome for improvements and fixes
 
 ---
 
