@@ -1,0 +1,42 @@
+# Build and deployment scripts
+setup-mcp.sh
+setup-mcp.sh-*
+
+# NPM package artifacts
+*.tgz
+github-mcp-custom-*.tgz
+
+# Text files and structure docs
+*.txt
+
+# Node modules
+node_modules/
+
+# Build outputs
+dist/
+bin/
+
+# Logs
+*.log
+log/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Temporary files
+*.tmp
+*.temp
+
+# Go build artifacts
+go/
+
+# NPM specific
+npm-github-mcp/
+mcp-servers/
