@@ -1,0 +1,23 @@
+{
+  "name": "github-mcp-custom",
+  "version": "1.0.18",
+  "description": "Cross-platform NPX-wrappable GitHub MCP Server",
+  "main": "bin/index.js",
+  "bin": {
+    "github-mcp-custom": "bin/index.js"
+  },
+  "files": [
+    "bin",
+    "dist"
+  ],
+  "scripts": {
+    "build": "go build -o dist/github-mcp-server ./cmd/github-mcp-server"
+  },
+  "keywords": [
+    "github",
+    "mcp",
+    "cli"
+  ],
+  "author": "idletoaster",
+  "license": "MIT"
+}
