@@ -1,1 +1,45 @@
-{\n  \"name\": \"github-mcp-custom\",\n  \"version\": \"1.0.20\",\n  \"description\": \"Cross-platform NPX-wrappable GitHub MCP Server\",\n  \"main\": \"bin/index.js\",\n  \"bin\": {\n    \"github-mcp-custom\": \"bin/index.js\"\n  },\n  \"files\": [\n    \"bin\",\n    \"dist\",\n    \"README.md\",\n    \"LICENSE\"\n  ],\n  \"scripts\": {\n    \"build\": \"bash scripts/build.sh\",\n    \"build:windows\": \"scripts\\\\build.bat\",\n    \"build:linux\": \"GOOS=linux GOARCH=amd64 go build -ldflags \\\"-s -w\\\" -o dist/github-mcp-server-linux .\",\n    \"build:macos\": \"GOOS=darwin GOARCH=amd64 go build -ldflags \\\"-s -w\\\" -o dist/github-mcp-server-macos .\",\n    \"build:win\": \"GOOS=windows GOARCH=amd64 go build -ldflags \\\"-s -w\\\" -o dist/github-mcp-server.exe .\",\n    \"test\": \"go test -v ./...\",\n    \"prepublishOnly\": \"npm run build\"\n  },\n  \"keywords\": [\n    \"github\",\n    \"mcp\",\n    \"cli\",\n    \"cross-platform\",\n    \"npx\",\n    \"claude-desktop\"\n  ],\n  \"author\": \"idletoaster\",\n  \"license\": \"MIT\",\n  \"repository\": {\n    \"type\": \"git\",\n    \"url\": \"https://github.com/idletoaster/github-mcp-custom.git\"\n  },\n  \"homepage\": \"https://github.com/idletoaster/github-mcp-custom#readme\",\n  \"bugs\": {\n    \"url\": \"https://github.com/idletoaster/github-mcp-custom/issues\"\n  },\n  \"engines\": {\n    \"node\": \">=14.0.0\"\n  }\n}
+{
+  "name": "github-mcp-custom",
+  "version": "1.0.21",
+  "description": "Cross-platform NPX-wrappable GitHub MCP Server",
+  "main": "bin/index.js",
+  "bin": {
+    "github-mcp-custom": "bin/index.js"
+  },
+  "files": [
+    "bin",
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "bash scripts/build.sh",
+    "build:windows": "scripts\\\\build.bat",
+    "build:linux": "GOOS=linux GOARCH=amd64 go build -ldflags \"-s -w\" -o dist/github-mcp-server-linux .",
+    "build:macos": "GOOS=darwin GOARCH=amd64 go build -ldflags \"-s -w\" -o dist/github-mcp-server-macos .",
+    "build:win": "GOOS=windows GOARCH=amd64 go build -ldflags \"-s -w\" -o dist/github-mcp-server.exe .",
+    "test": "go test -v ./...",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "github",
+    "mcp",
+    "cli",
+    "cross-platform",
+    "npx",
+    "claude-desktop"
+  ],
+  "author": "idletoaster",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/idletoaster/github-mcp-custom.git"
+  },
+  "homepage": "https://github.com/idletoaster/github-mcp-custom#readme",
+  "bugs": {
+    "url": "https://github.com/idletoaster/github-mcp-custom/issues"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
